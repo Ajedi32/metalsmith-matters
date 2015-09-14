@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/Ajedi32/metalsmith-frontmatter/issues"
   },
-  "homepage": "https://github.com/Ajedi32/metalsmith-frontmatter#readme"
+  "homepage": "https://github.com/Ajedi32/metalsmith-frontmatter#readme",
+  "dependencies": {
+    "gray-matter": "^2.0.1",
+    "is-utf8": "^0.2.0"
+  }
 }
