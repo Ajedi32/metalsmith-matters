@@ -1,4 +1,4 @@
-# metalsmith-matters
+# metalsmith-matters [![Build Status](https://travis-ci.org/Ajedi32/metalsmith-matters.svg)](https://travis-ci.org/Ajedi32/metalsmith-matters)
 
 A Metalsmith plugin to read metadata from YAML frontmatter
 
