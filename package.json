@@ -1,5 +1,5 @@
 {
-  "name": "metalsmith-frontmatter",
+  "name": "metalsmith-matters",
   "version": "1.0.0",
   "description": "A Metalsmith plugin to read metadata from YAML frontmatter",
   "main": "lib/index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ajedi32/metalsmith-frontmatter.git"
+    "url": "git+https://github.com/Ajedi32/metalsmith-matters.git"
   },
   "keywords": [
     "metalsmith"
@@ -16,9 +16,9 @@
   "author": "Andrew Meyer",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Ajedi32/metalsmith-frontmatter/issues"
+    "url": "https://github.com/Ajedi32/metalsmith-matters/issues"
   },
-  "homepage": "https://github.com/Ajedi32/metalsmith-frontmatter#readme",
+  "homepage": "https://github.com/Ajedi32/metalsmith-matters#readme",
   "dependencies": {
     "gray-matter": "^2.0.1",
     "is-utf8": "^0.2.0"

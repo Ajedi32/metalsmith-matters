@@ -1,4 +1,4 @@
-# metalsmith-frontmatter
+# metalsmith-matters
 
 A Metalsmith plugin to read metadata from YAML frontmatter
 
@@ -6,16 +6,16 @@ A Metalsmith plugin to read metadata from YAML frontmatter
 
 ## Installation
 
-  npm install --save metalsmith-frontmatter
+  npm install --save metalsmith-matters
 
 ## CLI Usage
 
-After installing metalsmith-frontmatter, simply add the `metalsmith-frontmatter` key to the plugins in your `metalsmith.json` file. Be sure to include it *before* any plugins which need to use the metadata in your frontmatter, or which expect as input files with no frontmatter header. Generally speaking, this means that metalsmith-frontmatter should be the first plugin in the list.
+After installing metalsmith-matters, simply add the `metalsmith-matters` key to the plugins in your `metalsmith.json` file. Be sure to include it *before* any plugins which need to use the metadata in your frontmatter, or which expect as input files with no frontmatter header. Generally speaking, this means that metalsmith-matters should be the first plugin in the list.
 
 ```javascript
 {
   "plugins": {
-    "metalsmith-frontmatter": true
+    "metalsmith-matters": true
     // Other plugins...
   }
 }
@@ -23,10 +23,10 @@ After installing metalsmith-frontmatter, simply add the `metalsmith-frontmatter`
 
 ## JavaScript Usage
 
-After installing metalsmith-frontmatter, you can require `metalsmith-frontmatter` in your code, then call the exported value to initialize the plugin and pass the result to `Metalsmith.use` (just as you would with any other Metalsmith plugin). Again, be sure to use metalsmith-frontmatter *before* any plugins which need to use the metadata defined your frontmatter, or which expect as input files with no frontmatter header. Generally speaking, this means that metalsmith-frontmatter should be the first plugin in the list.
+After installing metalsmith-matters, you can require `metalsmith-matters` in your code, then call the exported value to initialize the plugin and pass the result to `Metalsmith.use` (just as you would with any other Metalsmith plugin). Again, be sure to use metalsmith-matters *before* any plugins which need to use the metadata defined your frontmatter, or which expect as input files with no frontmatter header. Generally speaking, this means that metalsmith-matters should be the first plugin in the list.
 
 ```javascript
-var frontmatter = require('metalsmith-frontmatter');
+var frontmatter = require('metalsmith-matters');
 
 Metalsmith(__dirname)
   .use(frontmatter())
