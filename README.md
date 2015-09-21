@@ -1,7 +1,9 @@
 # metalsmith-matters [![Build Status](https://travis-ci.org/Ajedi32/metalsmith-matters.svg)](https://travis-ci.org/Ajedi32/metalsmith-matters)
 
-A [Metalsmith](https://github.com/segmentio/metalsmith) plugin to read metadata
-from YAML frontmatter
+A [Metalsmith](https://github.com/segmentio/metalsmith) plugin to read file
+metadata from frontmatter. Supports all frontmatter formats supported by the
+[gray-matter](https://github.com/jonschlinkert/gray-matter#optionslang)
+library. (Including YAML, JSON, and TOML.)
 
 "But wait!" you say. "Doesn't Metalsmith already have that built-in"? Well, yes.
 For now anyway. This plugin is an attempt to extract that functionality out of
