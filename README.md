@@ -9,7 +9,7 @@ library. (Including YAML, JSON, and TOML.)
 For now anyway. This plugin is an attempt to extract that functionality out of
 the Metalsmith core. Eventually the goal is to have frontmatter parsing removed
 from the Metalsmith core entirely in favor of this plugin or a similar one (see
-segmentio/metalsmith#157).
+[segmentio/metalsmith#157](https://github.com/segmentio/metalsmith/issues/157)).
 
 Even in the absence of that change though, this plugin has one key advantage
 over the built-in frontmatter parsing in Metalsmith: it's composable with other
