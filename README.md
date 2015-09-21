@@ -20,8 +20,8 @@ frontmatter parsing for only a subset of files, or you could place it *after*
 [`metalsmith-s3`](https://github.com/mwishek/metalsmith-s3) in the plugin list
 so that it parses frontmatter in downloaded files. Secondly, this plugin
 provides a way to pass options to the underlying frontmatter parsing library,
-[gray-matter](https://github.com/jonschlinkert/gray-matter). This you do to
-things like
+[gray-matter](https://github.com/jonschlinkert/gray-matter). This allows you to
+do things like
 [change the delimiter used to separate frontmatter from the rest of the file](https://github.com/jonschlinkert/gray-matter#optionsdelims),
 or
 [set TOML as the default frontmatter format](https://github.com/jonschlinkert/gray-matter#optionslang).
