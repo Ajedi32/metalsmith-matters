@@ -64,6 +64,7 @@ should be the first plugin in the list.
 var frontmatter = require('metalsmith-matters');
 
 Metalsmith(__dirname)
+  .frontmatter(false) // Disable built-in frontmatter parsing (recommended)
   .use(frontmatter())
   .use(/* Other plugins... */)
   .build(function(err) {
