@@ -24,4 +24,25 @@ describe('metalsmith-matters', function(){
         done();
       });
   });
+
+  describe('options', function(){
+    // Given that all metalsmith-matters options are currently implemented by
+    // simply passing the options argument to gray-matter, I believe testing
+    // only one of gray-matter's options is sufficient coverage of this feature.
+    // If the implementation changes in the future, more comprehensive test
+    // coverage may be necessary.
+
+    describe('delims', function(){
+      it('should set the delimiters used for frontmatter', function(done) {
+        Metalsmith('test/fixtures/delimiters-option')
+          .frontmatter(false)
+          .use(frontmatter({delims: ['~~~', '~~~']}))
+          .build(function(err, files){
+            if (err) return done(err);
+            assert.equal(files["test.md"].someKey, "value");
+            done();
+          });
+      });
+    });
+  });
 });
