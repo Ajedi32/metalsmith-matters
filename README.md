@@ -44,7 +44,9 @@ metalsmith-matters should be the first plugin in the list.
 ```javascript
 {
   "plugins": {
-    "metalsmith-matters": true
+    "metalsmith-matters": {
+      // Options
+    }
     // Other plugins...
   }
 }
@@ -65,9 +67,26 @@ var frontmatter = require('metalsmith-matters');
 
 Metalsmith(__dirname)
   .frontmatter(false) // Disable built-in frontmatter parsing (recommended)
-  .use(frontmatter())
+  .use(frontmatter({
+    // Options
+  }))
   .use(/* Other plugins... */)
   .build(function(err) {
     if (err) throw err;
   });
 ```
+
+# Options
+
+metalsmith-matters supports all the options supported by
+[`gray-matter`](https://github.com/jonschlinkert/gray-matter),
+metalsmith-matters' underlying frontmatter parsing library (it's the same one
+used by the Metalsmith core). These include:
+
+* `parser`
+* `eval`
+* `lang`
+* `delims`
+
+For details on how to use these options, see the
+[documentation for `gray-matter`](https://github.com/jonschlinkert/gray-matter#options).
