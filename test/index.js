@@ -3,7 +3,7 @@ var Metalsmith = require('metalsmith');
 var frontmatter = require('../lib');
 
 describe('metalsmith-matters', function(){
-  it('should add add metadata based on the frontmatter in the file', function(done){
+  it('should add metadata based on the frontmatter in the file', function(done){
     Metalsmith('test/fixtures/basic')
       .frontmatter(false)
       .use(frontmatter())
