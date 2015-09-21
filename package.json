@@ -21,7 +21,8 @@
   "homepage": "https://github.com/Ajedi32/metalsmith-matters#readme",
   "dependencies": {
     "gray-matter": "^2.0.1",
-    "is-utf8": "^0.2.0"
+    "is-utf8": "^0.2.0",
+    "metalsmith-each": "^0.1.1"
   },
   "devDependencies": {
     "metalsmith": "^2.0.1",
