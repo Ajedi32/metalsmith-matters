@@ -16,6 +16,7 @@ describe('metalsmith-matters', function(){
 
   it('should remove frontmatter from the file contents', function(done){
     Metalsmith('test/fixtures/basic')
+      .frontmatter(false)
       .use(frontmatter())
       .build(function(err, files){
         if (err) return done(err);
