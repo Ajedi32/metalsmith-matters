@@ -29,9 +29,19 @@ test: node_modules
 test-debug: node_modules
 	@$(mocha) debug
 
+# Run jshint against the project
+lint-code:
+	jshint lib/
+lint-tests:
+	jshint test/
+lint: lint-code lint-tests
+
 #
 # Phonies.
 #
 
 .PHONY: test
 .PHONY: test-debug
+.PHONY: lint-code
+.PHONY: lint-tests
+.PHONY: lint
