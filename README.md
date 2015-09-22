@@ -76,7 +76,7 @@ Metalsmith(__dirname)
   });
 ```
 
-# Options
+## Options
 
 metalsmith-matters supports all the options supported by
 [`gray-matter`](https://github.com/jonschlinkert/gray-matter),
