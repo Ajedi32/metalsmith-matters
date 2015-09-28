@@ -43,6 +43,7 @@ metalsmith-matters should be the first plugin in the list.
 
 ```javascript
 {
+  "frontmatter": false, // Disable built-in frontmatter parsing (recommended)
   "plugins": {
     "metalsmith-matters": {
       // Options
