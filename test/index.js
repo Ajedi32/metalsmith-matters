@@ -27,13 +27,13 @@ describe('metalsmith-matters', function(){
 
   describe('options', function(){
     describe('implemented', function(){
-      it('should group metadata under one key', function(done){
+      it('should namespace metadata', function(done){
         Metalsmith('test/fixtures/group-option')
           .frontmatter(false)
-          .use(frontmatter({ group: 'groupByKey' }))
+          .use(frontmatter({ namespace: 'myNamespace' }))
           .build(function(err, files){
             if (err) return done(err);
-            assert.equal(files["test.md"].groupByKey.someKey, "value");
+            assert.equal(files["test.md"].myNamespace.someKey, "value");
             assert.equal(files["test.md"].someKey, undefined);
             done();
           });
