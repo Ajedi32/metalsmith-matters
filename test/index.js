@@ -38,6 +38,19 @@ describe('metalsmith-matters', function(){
             done();
           });
       });
+
+      it('should namespace metadata if options is a string', function(done){
+        Metalsmith('test/fixtures/group-option')
+          .frontmatter(false)
+          .use(frontmatter('myNamespace'))
+          .build(function(err, files){
+            if (err) return done(err);
+            assert.equal(files["test.md"].myNamespace.someKey, "value");
+            assert.equal(files["test.md"].someKey, undefined);
+            done();
+          });
+      });
+
     });
 
     // Given that all metalsmith-matters options are currently implemented by
