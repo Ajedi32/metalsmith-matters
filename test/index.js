@@ -34,6 +34,7 @@ describe('metalsmith-matters', function(){
           .build(function(err, files){
             if (err) return done(err);
             assert.equal(files["test.md"].groupByKey.someKey, "value");
+            assert.equal(files["test.md"].someKey, undefined);
             done();
           });
       });
