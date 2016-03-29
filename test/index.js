@@ -26,6 +26,19 @@ describe('metalsmith-matters', function(){
   });
 
   describe('options', function(){
+    describe('implemented', function(){
+      it('should group metadata under one key', function(done){
+        Metalsmith('test/fixtures/group-option')
+          .frontmatter(false)
+          .use(frontmatter({ group: 'groupByKey' }))
+          .build(function(err, files){
+            if (err) return done(err);
+            assert.equal(files["test.md"].groupByKey.someKey, "value");
+            done();
+          });
+      });
+    });
+
     // Given that all metalsmith-matters options are currently implemented by
     // simply passing the options argument to gray-matter, I believe testing
     // only one of gray-matter's options is sufficient coverage of this feature.
