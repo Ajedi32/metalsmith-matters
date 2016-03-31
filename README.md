@@ -101,10 +101,9 @@ author: Joe Writer
 
 In the Javascript:
 ```` javascript
-  // either use an options object
+  // new Metalsmith…
   .use(frontmatter({ namespace: 'page' }))
-  // Or if you use just namespacing, string will suffice
-  .use(frontmatter('page'))
+  // …build()
 ````
 
 Now, in your HTML, you'll call it like this (example with Handlebars):
