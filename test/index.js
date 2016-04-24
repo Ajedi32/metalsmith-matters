@@ -26,9 +26,9 @@ describe('metalsmith-matters', function(){
   });
 
   describe('options', function(){
-    describe('implemented', function(){
+    describe('namespace', function(){
       it('should namespace metadata', function(done){
-        Metalsmith('test/fixtures/group-option')
+        Metalsmith('test/fixtures/namespace-option')
           .frontmatter(false)
           .use(frontmatter({ namespace: 'myNamespace' }))
           .build(function(err, files){
