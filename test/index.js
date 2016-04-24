@@ -26,6 +26,20 @@ describe('metalsmith-matters', function(){
   });
 
   describe('options', function(){
+    describe('implemented', function(){
+      it('should namespace metadata', function(done){
+        Metalsmith('test/fixtures/group-option')
+          .frontmatter(false)
+          .use(frontmatter({ namespace: 'myNamespace' }))
+          .build(function(err, files){
+            if (err) return done(err);
+            assert.equal(files["test.md"].myNamespace.someKey, "value");
+            assert.equal(files["test.md"].someKey, undefined);
+            done();
+          });
+      });
+    });
+
     // Given that all metalsmith-matters options are currently implemented by
     // simply passing the options argument to gray-matter, I believe testing
     // only one of gray-matter's options is sufficient coverage of this feature.
