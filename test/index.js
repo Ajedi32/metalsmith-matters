@@ -40,17 +40,62 @@ describe('metalsmith-matters', function(){
       });
     });
 
-    // Given that all metalsmith-matters options are currently implemented by
-    // simply passing the options argument to gray-matter, I believe testing
-    // only one of gray-matter's options is sufficient coverage of this feature.
-    // If the implementation changes in the future, more comprehensive test
-    // coverage may be necessary.
-
+    // gray-matter options
     describe('delims', function(){
       it('should set the delimiters used for frontmatter', function(done) {
         Metalsmith('test/fixtures/delimiters-option')
           .frontmatter(false)
           .use(frontmatter({delims: ['~~~', '~~~']}))
+          .build(function(err, files){
+            if (err) return done(err);
+            assert.equal(files["test.md"].someKey, "value");
+            done();
+          });
+      });
+    });
+    describe('parser', function(){
+      it('should set the parser used for frontmatter', function(done) {
+        Metalsmith('test/fixtures/parser-option')
+          .frontmatter(false)
+          .use(frontmatter({parser: function(str) { return eval(str); }}))
+          .build(function(err, files){
+            if (err) return done(err);
+            assert.equal(files["test.md"].someKey, "value");
+            done();
+          });
+      });
+    });
+    describe('eval', function(){
+      describe('when true', function(){
+        it('should allow parsing executable frontmatter', function(done) {
+          Metalsmith('test/fixtures/eval-option')
+            .frontmatter(false)
+            .use(frontmatter({eval: true}))
+            .build(function(err, files){
+              if (err) return done(err);
+              assert.equal(files["test.md"].someKey, "value");
+              done();
+            });
+        });
+      });
+      describe('when false', function(){
+        it('should not allow parsing executable frontmatter', function(done) {
+          Metalsmith('test/fixtures/eval-option')
+            .frontmatter(false)
+            .use(frontmatter({eval: false}))
+            .build(function(err, files){
+              if (err) return done(err);
+              assert.equal(files["test.md"].someKey, undefined);
+              done();
+            });
+        });
+      });
+    });
+    describe('lang', function(){
+      it('should set the language used for frontmatter', function(done) {
+        Metalsmith('test/fixtures/lang-option')
+          .frontmatter(false)
+          .use(frontmatter({lang: 'javascript', eval: true}))
           .build(function(err, files){
             if (err) return done(err);
             assert.equal(files["test.md"].someKey, "value");
