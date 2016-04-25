@@ -57,6 +57,7 @@ describe('metalsmith-matters', function(){
       it('should set the parser used for frontmatter', function(done) {
         Metalsmith('test/fixtures/parser-option')
           .frontmatter(false)
+          /* jshint evil:true */
           .use(frontmatter({parser: function(str) { return eval(str); }}))
           .build(function(err, files){
             if (err) return done(err);
