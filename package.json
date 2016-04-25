@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-matters",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A Metalsmith plugin to read file metadata from frontmatter",
   "main": "lib/index.js",
   "scripts": {
