@@ -30,10 +30,10 @@ test-debug: node_modules
 	@$(mocha) debug
 
 # Run jshint against the project
-lint-code:
-	jshint lib/
-lint-tests:
-	jshint test/
+lint-code: node_modules
+	node_modules/.bin/jshint lib/
+lint-tests: node_modules
+	node_modules/.bin/jshint test/
 lint: lint-code lint-tests
 
 #
